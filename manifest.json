@@ -1,0 +1,23 @@
+{
+    "name": "server rendering chrome extension",
+    "version": "1.0",
+    "manifest_version": 3,
+    "description": "Sending data to the server",
+    "author": "Akhand Pratap Singh",
+    "permissions": [
+        "activeTab",
+        "storage",
+        "scripting"
+    ],
+    "host_permissions": [
+        "http://localhost:3000/*",
+        "*://*/*"
+    ],
+    "background": {
+        "service_worker": "background.js"
+    },
+    "action": {
+        "default_popup": "popup.html",
+        "default_title": "Send Data to Server"
+    }
+}

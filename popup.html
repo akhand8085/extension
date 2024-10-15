@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>chrome-extension</title>
+    <script src="popup.js"></script>
+
+    <style>
+        .box {
+            display: flex;
+            margin: 50px auto;
+            width: 500px;
+            height: 300px;
+            border: 2px solid black;
+            justify-content: center;
+            align-items: center;
+            background-color: skyblue;
+        }
+
+        input {
+            padding: 10px;
+            width: 400px;
+        }
+
+        .btn {
+            cursor: pointer;
+            margin: 0 170px;
+            padding: 10px 25px;
+        }
+
+        input::placeholder {
+            text-align: center;
+            line-height: 30px;
+            font-size: 20px;
+            color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <div>
+            <form method="post" action="/upload">
+                <h1>Enter Link</h1>
+                <input name="data_" type="url" id="link" placeholder="Enter the Link">
+                <br><br>
+                <button id="processLinkBtn" class="btn" type="submit" >Upload</button>
+            </form>
+        </div>
+    </div>
+   
+</body>
+
+</html>
